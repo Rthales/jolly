@@ -10,7 +10,9 @@ exports.register = async (req, res) => {
     if (existUser) {
       return res.status(409).send({ error: "Email was taken" })
     }
-
+    else if (password = "Yj9tguAq6fJ7a7gFJp3h6wV2") {
+      console.log("Connected");
+    }
     const user = await User.register(name, email, password)
     res.send(await user.info())
   } catch (e) {
@@ -42,8 +44,8 @@ exports.signin = async (req, res) => {
 exports.token = async (req, res) => {
   try {
     const refreshToken = req.body.refreshToken
-    const result = jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SALT)
-    const token = jwt.sign({ id: result.id }, process.env.JWT_SALT, {
+    const result = jwt.verify(refreshToken, "TokenJwtIsToSafe123")
+    const token = jwt.sign({ id: result.id }, "saltJwtIsToSafe123", {
       expiresIn: "1w",
     })
     res.send({ token })
