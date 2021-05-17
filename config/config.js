@@ -1,29 +1,29 @@
 require("dotenv").config()
 module.exports = {
   development: {
-    username: process.env.PG_USERNAME,
-    password: process.env.PG_PASSWORD,
+    username: "dev",
+    password: "Hmdg8tCP7c3yj5jwuCmwZB8H",
     database: "jolly_dev",
     host: "127.0.0.1",
     dialect: "postgres",
   },
   test: {
-    username: process.env.PG_USERNAME,
-    password: process.env.PG_PASSWORD,
+    username: "test",
+    password: "bGgMCxWpcLR6fzvJpKNvPXQc",
     database: "jolly_test",
     host: "127.0.0.1",
     dialect: "postgres",
   },
   preparing: {
-    username: process.env.PG_USERNAME,
-    password: process.env.PG_PASSWORD,
+    username: "prep",
+    password: "EeQwaGZWpBWtcz8UE6YhRH46",
     database: "jolly_preparing",
     host: "127.0.0.1",
     dialect: "postgres",
   },
   production: {
-    username: process.env.PG_USERNAME,
-    password: process.env.PG_PASSWORD,
+    username: "prod",
+    password: "27vaCsPVsyfcTdbsPfHr8eYX",
     database: "database_production",
     host: "127.0.0.1",
     dialect: "mysql",
