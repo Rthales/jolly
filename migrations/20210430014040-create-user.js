@@ -37,3 +37,4 @@ module.exports = {
     await queryInterface.dropTable("Users")
   },
 }
+// Insert into Users (1,"Hector","hector@gmail.com","171cc8f7d79d677d09fe05f5a4c9bc00e55ff779",01-01-2009,01-01-2010)
