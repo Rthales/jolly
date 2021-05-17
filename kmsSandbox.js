@@ -10,6 +10,7 @@ function encrypt(buffer) {
   return new Promise((resolve, reject) => {
     const params = {
       KeyId: "bc783961-4919-48ef-ae39-c4085f1a7bf7",
+      Token: "gaEUXcVZha0mz0Z49JKVeyLZBXLrhDo7PcSpUmqT",
       Plaintext: JSON.stringify(buffer),
     }
     kms.encrypt(params, (err, data) => {
